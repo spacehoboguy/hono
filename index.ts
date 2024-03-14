@@ -23,22 +23,13 @@ app.get("/hello", (c) => c.text("Hello Hono!"));
  * Server
  */
 try {
-
-    /**
-     * @run "ts-node index.ts"
-     * @exit "CTRL+C"
-     *
-     * @return void
-     */
     serve({
         fetch: app.fetch,
         port: parseInt(port as unknown as string),
     });
 } catch (e: unknown) {
-
     console.log(e);
 } finally {
-
     const heart = `\uD83D\uDE0D`
     console.log(`Hono served hot @ http://localhost:${port} ${heart}!`)
 }
