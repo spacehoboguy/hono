@@ -23,5 +23,8 @@ try {
 } catch (e: unknown) {
     console.log(e);
 } finally {
-    console.log(`Hono served hot @ http://localhost:${port}`)
+    const heart = `\uD83D\uDE0D`
+
+    console.log(`Hono served hot @ http://localhost:${port} ${heart}!`)
+    console.log(`Happy web development!`)
 }
